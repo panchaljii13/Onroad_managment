@@ -1,0 +1,63 @@
+﻿@model OnRodeassisment.Models.ComplaintModel
+
+@{
+    ViewData["Title"] = "Edit Complaint";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h4>Edit Complaint</h4>
+<hr />
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ComplaintId" />
+    <div class="form-group">
+        <label asp-for="VehicleModel" class="control-label"></label>
+        <input asp-for="VehicleModel" class="form-control" />
+        <span asp-validation-for="VehicleModel" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="VehicleCompny" class="control-label"></label>
+        <input asp-for="VehicleCompny" class="form-control" />
+        <span asp-validation-for="VehicleCompny" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Nature_OF_Issue" class="control-label"></label>
+        <input asp-for="Nature_OF_Issue" class="form-control" />
+        <span asp-validation-for="Nature_OF_Issue" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IssueDescription" class="control-label"></label>
+        <textarea asp-for="IssueDescription" class="form-control"></textarea>
+        <span asp-validation-for="IssueDescription" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Urgency_Lavel" class="control-label"></label>
+        <input asp-for="Urgency_Lavel" class="form-control" />
+        <span asp-validation-for="Urgency_Lavel" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Date_Of_Incident" class="control-label"></label>
+        <input asp-for="Date_Of_Incident" class="form-control" type="date" />
+        <span asp-validation-for="Date_Of_Incident" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Privous_Riper_Date" class="control-label"></label>
+        <input asp-for="Privous_Riper_Date" class="form-control" type="date" />
+        <span asp-validation-for="Privous_Riper_Date" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location" class="control-label"></label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SubmitById" class="control-label"></label>
+        <input asp-for="SubmitById" class="form-control" />
+        <span asp-validation-for="SubmitById" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save Changes" class="btn btn-primary" />
+        <a href="@Url.Action("ComplaintsList", "Complaint")" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

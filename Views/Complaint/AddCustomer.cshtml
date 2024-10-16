@@ -1,0 +1,65 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model OnRodeassisment.Models.CustomerModel
+
+@{
+}
+@{
+    ViewData["Title"] = "Customer Registration";
+}
+
+
+
+<section class="Rjistretion-bg h-30">
+    <div class="container py-2 h-30">
+        <div class="row d-flex justify-content-center align-items-center h-40">
+            <div class="col">
+                <div class="card card-registration my-2">
+                    <div class="row g-0">
+                        <div class="col-xl-4 d-none d-xl-block">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                 alt="Sample photo" class="img-fluid"
+                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Customer Information</h3>
+
+                                <form asp-action="AddCustomer" method="post">
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Full_Name" class="form-control form-control-lg" />
+                                        <label asp-for="Full_Name" class="form-label"></label>
+                                        <span asp-validation-for="Full_Name" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Phon" class="form-control form-control-lg" />
+                                        <label asp-for="Phon" class="form-label"></label>
+                                        <span asp-validation-for="Phon" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="email" class="form-control form-control-lg" />
+                                        <label asp-for="email" class="form-label"></label>
+                                        <span asp-validation-for="email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="Address" class="form-control form-control-lg" />
+                                        <label asp-for="Address" class="form-label"></label>
+                                        <span asp-validation-for="Address" class="text-danger"></span>
+                                    </div>
+                                   <div class="d-flex justify-content-end pt-3">
+                                        <button type="reset" class="btn btn-light btn-lg">Reset all</button>
+                                        <button type="submit" class="btn btn-warning btn-lg ms-2">Submit form</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+

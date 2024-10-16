@@ -1,0 +1,27 @@
+﻿@model OnRodeassisment.Models.ComplaintModel
+
+@{
+    ViewData["Title"] = "Complaint Details";
+}
+
+
+
+<div>
+    <h2>Complaint Details</h2>
+    <p><strong>Complaint ID:</strong> @Model.ComplaintId</p>
+    <p><strong>Vehicle Model:</strong> @Model.VehicleModel</p>
+    <p><strong>Vehicle Company:</strong> @Model.VehicleCompny</p>
+    <p><strong>Nature of Issue:</strong> @Model.Nature_OF_Issue</p>
+    <p><strong>Issue Description:</strong> @Model.IssueDescription</p>
+    <p><strong>Urgency Level:</strong> @Model.Urgency_Lavel</p>
+    <p><strong>Submission Time:</strong> @Model.SubmissionTime.ToShortDateString()</p>
+    <p><strong>Location:</strong> @Model.Location</p>
+
+    <h3>Customer Details</h3>
+    <p><strong>Name:</strong> @Model.Customer?.Full_Name</p>
+    <p><strong>Email:</strong> @Model.Customer?.email</p>
+    <p><strong>Phone:</strong> @Model.Customer?.Phon</p>
+    <p><strong>Address:</strong> @Model.Customer?.Address</p>
+
+    <a href="@Url.Action("ComplaintsList", "Complaint")" class="btn btn-primary">Back to List</a>
+</div>

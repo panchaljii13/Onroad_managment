@@ -1,0 +1,72 @@
+﻿@model OnRodeassisment.Models.Customer_CareModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="Rjistretion-bg h-30">
+    <div class="container py-2 h-30">
+        <div class="row d-flex justify-content-center align-items-center h-40">
+            <div class="col">
+                <div class="card card-registration my-2">
+                    <div class="row g-0">
+                        <div class="col-xl-4 d-none d-xl-block">
+                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp"
+                                 alt="Sample photo" class="img-fluid"
+                                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card-body p-md-5 text-black">
+                                <h3 class="mb-5 text-uppercase">Log In Your Account</h3>
+
+                                <form asp-action="CareLogIn" method="post">
+                                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                        <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </button>
+                                    </div>
+
+                                    <div class="divider d-flex align-items-center my-4">
+                                        <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                                    </div>
+
+                                    <!-- Email input -->
+                                    <div class="form-outline mb-4">
+                                        <input asp-for="email" class="form-control form-control-lg" placeholder="Enter a valid email address" />
+                                        <span asp-validation-for="email" class="text-danger"></span>
+                                        <label class="form-label" for="email">Email address</label>
+                                    </div>
+
+                                    <!-- Password input -->
+                                    <div class="form-outline mb-3">
+                                        <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Enter password" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                        <label class="form-label" for="Password">Password</label>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <a href="#!" class="text-body">Forgot password?</a>
+                                    </div>
+
+                                    <div class="text-center text-lg-start mt-4 pt-2">
+                                        <button type="submit" class="btn btn-primary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">
+                                            Login
+                                        </button>
+                                        <p class="small fw-bold mt-2 pt-1 mb-0"> Don't have an account? <a asp-area="" asp-controller="CareRagistretion" asp-action="CareRagistre" class="link-danger">Register</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
